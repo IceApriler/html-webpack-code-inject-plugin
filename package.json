@@ -1,6 +1,6 @@
 {
   "name": "html-webpack-code-inject-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Inject custom code in head or body.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
