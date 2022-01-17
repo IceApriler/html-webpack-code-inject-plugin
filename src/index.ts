@@ -1,7 +1,7 @@
 import { Compiler, compilation } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-export interface HtmlWebpackInjectCodePluginOptions {
+export interface HtmlWebpackCodeInjectPluginOptions {
   /**
    * Inject custom code to <head>...</head>.
    */
@@ -32,17 +32,17 @@ function isArray(field: any): boolean {
   return Object.prototype.toString.call(field).slice(8, -1).toLowerCase() === "array"
 }
 
-export default class HtmlWebpackInjectCodePlugin {
-  private readonly options: HtmlWebpackInjectCodePluginOptions;
+export default class HtmlWebpackCodeInjectPlugin {
+  private readonly options: HtmlWebpackCodeInjectPluginOptions;
 
-  constructor(options: HtmlWebpackInjectCodePluginOptions = { }) {
+  constructor(options: HtmlWebpackCodeInjectPluginOptions = { }) {
     this.options = options;
   }
   
 
   apply(compiler: Compiler): void {
 
-    const plugin = 'HtmlWebpackInjectCodePlugin';
+    const plugin = 'HtmlWebpackCodeInjectPlugin';
     compiler.hooks.compilation.tap(
       plugin,
       (compilation: compilation.Compilation) => {

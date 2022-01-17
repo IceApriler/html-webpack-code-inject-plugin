@@ -1,16 +1,16 @@
-# html-webpack-inject-code-plugin
+# html-webpack-code-inject-plugin
 
 ## Webpack config
 
 ```js
-const HtmlWebpackInjectCodePlugin = require('html-webpack-inject-code-plugin').default;
+const HtmlWebpackCodeInjectPlugin = require('html-webpack-code-inject-plugin').default;
 
 module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       // some config
     }),
-    new HtmlWebpackInjectCodePlugin({
+    new HtmlWebpackCodeInjectPlugin({
       headHtmlTagObjectList: [
         {
           tagName: "script",

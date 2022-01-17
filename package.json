@@ -1,7 +1,7 @@
 {
-  "name": "html-webpack-inject-code-plugin",
+  "name": "html-webpack-code-inject-plugin",
   "version": "1.0.0",
-  "description": "",
+  "description": "Inject custom code in head or body.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -13,7 +13,10 @@
     "build": "rm -rf dist && tsc -p src",
     "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish"
   },
-  "keywords": [],
+  "keywords": [
+    "webpack",
+    "html-webpack-plugin"
+  ],
   "author": "qimengjie <qimengjie@163.com>",
   "license": "MIT",
   "peerDependencies": {
@@ -33,6 +36,11 @@
       "prettier --parser=typescript --write"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IceApriler/html-webpack-code-inject-plugin"
+  },
+  "homepage": "https://github.com/IceApriler/html-webpack-code-inject-plugin",
   "devDependencies": {
     "@types/babel__traverse": "^7.0.13",
     "@types/jest": "^26.0.4",
